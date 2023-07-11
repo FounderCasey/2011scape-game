@@ -709,7 +709,7 @@ abstract class Player(world: World) : Pawn(world) {
 
             // apply a 1.0x bonus which does
             // nothing to overall gain
-            bonusExperience = 1.0
+            bonusExperience = 10001.0
         } else {
 
             // set the "bonus xp gained" varp
@@ -718,7 +718,7 @@ abstract class Player(world: World) : Pawn(world) {
         }
 
         if (!modifiers) {
-            modifier = 1.0
+            modifier = 1000.0
         }
 
         val newXp = min(SkillSet.MAX_XP.toDouble(), (oldXp + (xp * modifier * bonusExperience)))
